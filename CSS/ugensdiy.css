@@ -1,0 +1,219 @@
+.center{
+    text-align: center;
+  }
+
+
+  /* Skrifttype*/
+
+@font-face {
+  font-family: 'vogue'; /* Navn på din skrifttype */
+  src: url('fonts/vogue.ttf') format('woff2'), /* Det bedste format til web */
+       url('fonts/Vogue.ttf') format('woff'), /* Alternativ format */
+       url('fonts/Vogue.tff') format('truetype'); /* Til ældre browsere */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Vogue.ttf';
+}
+
+
+h1,h2,h3{
+  font-family: 'Vogue.ttf';
+}
+  
+
+/* Style hovedmenuen */
+.main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(122, 89, 48);
+    display: flex; /* Brug flexbox til at justere menupunkter */
+    font-family: 'Vogue.ttf';
+  }
+  
+  .main-menu li {
+    position: relative;
+    flex-grow: 1; /* Gør menupunkterne fleksible og jævnt fordelt */
+    display: inline;
+    margin: 0;
+  }
+  
+  .main-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrerer teksten i hvert menupunkt */
+    padding: 15px; /* Juster padding så det fylder mere af baren */
+    color: white;
+    text-decoration: none;
+   
+    text-align: center;
+    width: 100%;
+    border: none;
+  }
+  
+  .main-menu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Skjul submenuer som standard */
+  .submenu, .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(111, 82, 45);
+    width: 100%; /* Få submenuen til at fylde hele bredden af hovedmenuen */
+    font-family: 'Vogue.ttf';
+  }
+  
+  /* Style submenupunkter */
+  .submenu li, .subsubmenu li {
+    display: block;
+  }
+  
+  .submenu li a, .subsubmenu li a {
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .submenu li a:hover, .subsubmenu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Vis submenu når musen er over */
+  .main-menu li:hover > .submenu {
+    display: block;
+  }
+  
+  /* Vis subsubmenu når musen er over */
+  .submenu li:hover > .subsubmenu {
+    display: block;
+    left: 100%;
+    top: 0;
+  }
+  
+  /* Sørg for at submenuer vises korrekt over andre elementer */
+  .submenu, .subsubmenu {
+    z-index: 1000;
+  }
+  
+  .submenu{
+    opacity: 1;
+    background-color: rgb(111, 82, 45);
+  }
+
+  
+
+  body {
+    font-family: Arial, sans-serif; /* Vælg skrifttype */
+    margin: 0;
+    padding: 0;
+}
+
+.flex-container {
+    display: flex; /* Gør containeren til en flexbox */
+    border: 2px solid rgb(114, 84, 47); /* Brun kant */
+
+    padding: 0px; /* Indre afstand */
+    align-items: center; /* Vertikal centrering af indholdet */
+    max-width: 10000px; /* Maksimal bredde på containeren */
+    margin: 0px; /* Centrerer containeren horisontalt */
+    margin-top: 20px;
+    margin-bottom: 5px;
+    width: 900px;
+}
+
+.text-container {
+    flex: 2; /* Giver tekstindholdet fleksibilitet til at fylde rummet */
+    margin-right: 0px; /* Afstand mellem teksten og billedet */
+    margin-bottom: 52px;
+    margin-left: 10px;
+    line-height: 2;
+    font-family: 'Vogue.ttf';
+    
+}
+
+.checkbox-container {
+    display: flex; /* Gør containeren til en flexbox for checkbox og label */
+    align-items: center; /* Vertikal centrering af checkbox og label */
+    
+   
+}
+
+
+
+.main-container{
+    display: flex; /* Gør denne container til en flex container */
+    justify-content: space-between; /* Fordel pladsen mellem elementerne */
+   
+}
+
+/* her styles opskriftens indhold*/
+
+h2{
+    margin-left: 20px;
+}
+
+.opskrift-indhold{
+    display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  width: 800px;
+  margin-left: 0px;
+  align-items: center;
+  line-height: 3;
+  margin-top: 0px;
+  margin-left: 10px;
+  font-family: 'Vogue.ttf';
+
+}
+
+/* Styling på min billedrække*/ 
+.image-row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Tre lige store kolonner */
+    gap: 10px; /* Mellemrum mellem kolonner */
+    flex-basis: 50%;
+  }
+
+  .column {
+    flex: 1;
+    margin: 10px; /* Plads mellem kolonnerne */
+    margin-top: 20px;
+    margin-right: 10px;
+    
+  }
+  
+  .column img {
+    width: 100%; /* Tilpasser billedets bredde til kolonnen */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px; /* Runde hjørner på billederne (valgfrit) */
+  }
+
+.opskrift{
+    display: flex;
+    flex-direction: row; /* Sørger for at sektionerne stables vertikalt */
+    align-items:flex-start; /* Centrerer indholdet */
+    width: 100%;
+    padding: 20px;
+    
+}
+  
+  .text-content {
+    margin-bottom: 20px; /* Plads mellem tekstindhold og billedrækken */
+    flex-basis: 50%;
+    font-family: 'Vogue.ttf';
+  }
+
+
+
+
+  

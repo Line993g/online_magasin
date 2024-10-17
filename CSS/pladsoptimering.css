@@ -1,0 +1,213 @@
+
+.center{
+    text-align: center;
+  }
+
+  /* Skrifttype*/
+
+@font-face {
+  font-family: 'vogue'; /* Navn på din skrifttype */
+  src: url('fonts/vogue.ttf') format('woff2'), /* Det bedste format til web */
+       url('fonts/Vogue.ttf') format('woff'), /* Alternativ format */
+       url('fonts/Vogue.tff') format('truetype'); /* Til ældre browsere */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Vogue.ttf';
+}
+
+
+h1,h2,h3{
+  font-family: 'Vogue.ttf';
+}
+  
+  /* Style hovedmenuen */
+  .main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(122, 89, 48);
+    display: flex; /* Brug flexbox til at justere menupunkter */
+  }
+  
+  .main-menu li {
+    position: relative;
+    flex-grow: 1; /* Gør menupunkterne fleksible og jævnt fordelt */
+    display: inline;
+    margin: 0;
+  }
+  
+  .main-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrerer teksten i hvert menupunkt */
+    padding: 15px; /* Juster padding så det fylder mere af baren */
+    color: white;
+    text-decoration: none;
+   
+    text-align: center;
+    width: 100%;
+    border: none;
+  }
+  
+  .main-menu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Skjul submenuer som standard */
+  .submenu, .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(111, 82, 45);
+    width: 100%; /* Få submenuen til at fylde hele bredden af hovedmenuen */
+    z-index: 1000;
+  }
+  
+  /* Style submenupunkter */
+  .submenu li, .subsubmenu li {
+    display: block;
+    z-index: 1000;
+  }
+  
+  .submenu li a, .subsubmenu li a {
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .submenu li a:hover, .subsubmenu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Vis submenu når musen er over */
+  .main-menu li:hover > .submenu {
+    display: block;
+  }
+  
+  /* Vis subsubmenu når musen er over */
+  .submenu li:hover > .subsubmenu {
+    display: block;
+    left: 100%;
+    top: 0;
+  }
+  
+  /* Sørg for at submenuer vises korrekt over andre elementer */
+  .submenu, .subsubmenu {
+    z-index: 1000;
+  }
+  
+  .submenu{
+    opacity: 1;
+    background-color: rgb(111, 82, 45);
+    z-index: 1000;
+  }
+  
+
+  /* opstilling i kolonner*/ 
+
+  .container{
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  }
+
+  .column{
+    flex: 1 300px;
+    margin: 30px;
+    text-align: center;
+    line-height: 1.5;
+    max-width: 600px;
+  }
+
+  img {
+    max-width: 600px;
+    height: auto;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* design på formular*/
+
+
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 530px;
+  text-align: center;
+  font-family: 'Vogue.ttf';
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+  font-weight: bold;
+  margin-left: 40px;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(111, 82, 45);
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Vogue.ttf';
+}
+
+input[type="text"]::placeholder, input[type="email"]::placeholder {
+  color: rgb(111, 82, 45);
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type="reset"], input[type="submit"] {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Vogue.ttf';
+}
+
+input[type="reset"] {
+  background-color: rgb(111, 82, 45);
+  color: white;
+}
+
+input[type="submit"] {
+  background-color: rgb(111, 82, 45);
+  color: white;
+}
+
+input[type="reset"]:hover {
+  background-color: rgb(111, 82, 45);
+}
+
+input[type="submit"]:hover {
+  background-color: rgb(111, 82, 45);
+}
+

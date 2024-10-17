@@ -1,0 +1,128 @@
+
+.center{
+    text-align: center;
+  }
+
+
+  /* Skrifttype*/
+
+@font-face {
+  font-family: 'vogue'; /* Navn på din skrifttype */
+  src: url('fonts/vogue.ttf') format('woff2'), /* Det bedste format til web */
+       url('fonts/Vogue.ttf') format('woff'), /* Alternativ format */
+       url('fonts/Vogue.tff') format('truetype'); /* Til ældre browsere */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Vogue.ttf';
+}
+
+
+h1,h2,h3{
+  font-family: 'Vogue.ttf';
+}
+  
+  
+  /* Style hovedmenuen */
+  .main-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(122, 89, 48);
+    display: flex; /* Brug flexbox til at justere menupunkter */
+    z-index: 1;
+  }
+  
+  .main-menu li {
+    position: relative;
+    flex-grow: 1; /* Gør menupunkterne fleksible og jævnt fordelt */
+    display: inline;
+    margin: 0;
+  }
+  
+  .main-menu li a {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centrerer teksten i hvert menupunkt */
+    padding: 15px; /* Juster padding så det fylder mere af baren */
+    color: white;
+    text-decoration: none;
+   
+    text-align: center;
+    width: 100%;
+    border: none;
+  }
+  
+  .main-menu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Skjul submenuer som standard */
+  .submenu, .subsubmenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style-type: none;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(111, 82, 45);
+    width: 100%; /* Få submenuen til at fylde hele bredden af hovedmenuen */
+  }
+  
+  /* Style submenupunkter */
+  .submenu li, .subsubmenu li {
+    display: block;
+  }
+  
+  .submenu li a, .subsubmenu li a {
+    padding: 10px 20px;
+    color: white;
+  }
+  
+  .submenu li a:hover, .subsubmenu li a:hover {
+    background-color: rgb(111, 82, 45);
+  }
+  
+  /* Vis submenu når musen er over */
+  .main-menu li:hover > .submenu {
+    display: block;
+  }
+  
+  /* Vis subsubmenu når musen er over */
+  .submenu li:hover > .subsubmenu {
+    display: block;
+    left: 100%;
+    top: 0;
+  }
+  
+  /* Sørg for at submenuer vises korrekt over andre elementer */
+  .submenu, .subsubmenu {
+    z-index: 1000;
+  }
+  
+  .submenu{
+    opacity: 1;
+    background-color: rgb(111, 82, 45);
+  }
+  
+  .content{
+    background-image: url(../Bolig-magasin/Images/stue5.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     height: calc(100vh - 40px);
+     padding: 20px; 
+    }
+
+    .artikel{
+        margin-left: 100px;
+        width: 500px;
+        background-color: rgb(111, 82, 45);
+        margin-top: 0px;
+        line-height: 1.5;
+        text-align: center;
+    }

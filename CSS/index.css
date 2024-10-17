@@ -1,0 +1,291 @@
+
+.center{
+  text-align: center;
+  margin-bottom: 0;
+  
+}
+
+/* Skrifttype*/
+
+@font-face {
+  font-family: 'vogue'; /* Navn på din skrifttype */
+  src: url('fonts/vogue.ttf') format('woff2'), /* Det bedste format til web */
+       url('fonts/Vogue.ttf') format('woff'), /* Alternativ format */
+       url('fonts/Vogue.tff') format('truetype'); /* Til ældre browsere */
+  font-weight: normal;
+  font-style: normal;
+}
+
+body{
+  font-family: 'Vogue.ttf';
+}
+
+
+h1,h2,h3,article,li{
+  font-family: 'Vogue.ttf';
+}
+
+
+/* Style hovedmenuen */
+.main-menu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(122, 89, 48);
+  display: flex; /* Brug flexbox til at justere menupunkter */
+}
+
+.main-menu li {
+  position: relative;
+  flex-grow: 1; /* Gør menupunkterne fleksible og jævnt fordelt */
+  display: inline;
+  margin: 0;
+}
+
+.main-menu li a {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centrerer teksten i hvert menupunkt */
+  padding: 15px; /* Juster padding så det fylder mere af baren */
+  color: white;
+  text-decoration: none;
+ 
+  text-align: center;
+  width: 100%;
+  border: none;
+}
+
+.main-menu li a:hover {
+  background-color: rgb(111, 82, 45);
+}
+
+/* Skjul submenuer som standard */
+.submenu, .subsubmenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  list-style-type: none;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(111, 82, 45);
+  width: 100%; /* Få submenuen til at fylde hele bredden af hovedmenuen */
+}
+
+/* Style submenupunkter */
+.submenu li, .subsubmenu li {
+  display: block;
+}
+
+.submenu li a, .subsubmenu li a {
+  padding: 10px 20px;
+  color: white;
+}
+
+.submenu li a:hover, .subsubmenu li a:hover {
+  background-color: rgb(111, 82, 45);
+}
+
+/* Vis submenu når musen er over */
+.main-menu li:hover > .submenu {
+  display: block;
+}
+
+/* Vis subsubmenu når musen er over */
+.submenu li:hover > .subsubmenu {
+  display: block;
+  left: 100%;
+  top: 0;
+}
+
+/* Sørg for at submenuer vises korrekt over andre elementer */
+.submenu, .subsubmenu {
+  z-index: 1000;
+}
+
+.submenu{
+  opacity: 1;
+  background-color: rgb(111, 82, 45);
+}
+
+
+/* Styling på min billedrække*/ 
+.image-row {
+  display: flex; /* Bruger flexbox til at arrangere billederne i en række */
+  justify-content: center; /* Centrerer billederne horisontalt */
+  flex-wrap: wrap; /* Tillader at billederne flyder til næste linje, hvis der ikke er plads */
+  padding: 10px; /* Indvendig afstand omkring rækken */
+}
+
+.image-row img {
+  max-width: 331px; /* Billederne skalerer i forhold til forældreelementets størrelse */
+  height: auto; /* Bevarer proportionerne af billederne */
+  margin: 10px; /* Afstand mellem billederne */
+  border-radius: 8px; /* Runde hjørner på billederne (valgfrit) */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Skyggeeffekt (valgfrit) */
+  position: relative; /* Gør det muligt at placere h2 over billedrækken */
+  margin-top: 1%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+/* Flexbox styling af tekst*/
+.flex-container{
+  display: flex;
+  justify-content: flex-start;
+  text-align: left;
+  width: 740px;
+  margin-left: 0px;
+  align-items: center;
+  line-height: 2;
+  margin-top: 0px;
+
+}
+
+/* Must read boks styling*/ 
+
+ .must-read-box {
+  border: 2px rgba(197, 149, 91, 0.533);
+  border-radius: 10px;
+  font-family: Arial, sans-serif;
+  display: flex; /* Flexbox for layout */
+  flex-direction: column; /* Vertikal opstilling */
+  margin-right: 70px;
+  margin-bottom: 70px;
+ }
+
+.content {
+  flex: 1; /* Tag resten af pladserne */
+  margin-right: 20px; /* Afstand til billedet */
+ 
+}
+
+.article {
+  display: flex; /* Flexbox for at arrangere billede og tekst */
+  align-items: flex-start; /* Vertikal centrering af indhold */
+  margin-bottom: 10px; /* Afstand mellem artikler */
+  
+}
+
+.article img {
+  max-width: 150px; /* Maksimal bredde for billedet */
+  margin-right: 10px; /* Afstand til teksten */
+}
+
+.article a {
+  text-decoration: none; /* Ingen understregning */
+  color: rgb(111, 82, 45); /* Blå tekst for links */
+  font-weight: bold; /* Fed skrift til links */
+  font-family: 'Vogue.ttf';
+}
+
+.article a:hover {
+  text-decoration: underline; /* Understregning ved hover */
+}
+
+.description {
+  color: #555; /* Mørkegrå tekst for beskrivelser */
+  
+}
+
+.image {
+  max-width: 1000px; /* Juster bredden som ønskes */
+  max-height: 1000px; /* Juster højden som ønskes */
+  border-radius: 5px; /* Runde hjørner på billedet */
+}
+
+.main-container {
+  display: flex; /* Gør denne container til en flex container */
+  justify-content: space-between; /* Fordel pladsen mellem elementerne */
+ margin: 20px;
+}
+
+.flex-container{
+  margin-top: 0px;
+  padding-top: 0px;
+
+}
+
+.boxed {
+  border: 2px solid rgb(111, 82, 45); /* Kanten om boksen */
+  padding: 3px; /* Lidt plads inden for boksen */
+  border-radius: 8px; /* Rundede hjørner (valgfrit) */
+  text-align: center; /* Centrerer teksten inden i boksen */
+  margin: 20px 0; /* Margin for afstand til andre elementer */
+  background-color: rgb(111, 82, 45); /* Baggrundsfarve (valgfrit) */
+  margin-top: 2px;
+  
+}
+
+/* Style til bundbjælken */
+.newsletter-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(111, 82, 45);
+  color: rgb(111, 82, 45);
+  padding: 15px 0;
+  text-align: center;
+  z-index: 1000;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  
+}
+
+/* Style til formularen */
+.form-container {
+  display: flex; /* Gør det muligt at centrere indholdet */
+  justify-content: center; /* Centrerer indholdet horisontalt */
+  align-items: center; /* Centrerer indholdet vertikalt */
+  
+}
+
+.newsletter-footer {
+  background-color: rgb(111, 82, 45);
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  text-align: center;
+  margin-top: 0px; /* Lidt luft over formularen */
+  width: 100%;
+}
+
+.newsletter-footer form {
+  display: flex; /* Brug flexbox til formularen */
+  flex-direction: column; /* Arrangerer elementerne i en kolonne */
+  align-items: center; /* Centrerer elementerne horisontalt */
+}
+
+.newsletter-footer label {
+  margin-bottom: 0px; /* Afstand mellem label og inputfelt */
+}
+
+.newsletter-footer input[type="email"] {
+  padding: 4px;
+  margin-bottom: 5px; /* Afstand mellem inputfelt og knap */
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 20%; /* Gør inputfeltet bredere */
+  
+}
+
+.newsletter-footer button {
+  padding: 10px 20px;
+  background-color: rgb(255, 255, 255);
+  color: rgb(111, 82, 45);
+  border: none;
+  border-radius: 5px;
+  font-size: 13px;
+  cursor: pointer;
+  width: 7%; /* Gør knappen bredere */
+}
+
+.newsletter-footer button:hover {
+  background-color: rgb(111, 82, 45);
+}
+
+.flyt {
+  element.style 
+    position: relative;
+    top: -300px;
+}
